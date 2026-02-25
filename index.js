@@ -1,6 +1,5 @@
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason } = require("@whiskeysockets/baileys")
 const pino = require("pino")
-const qrcode = require("qrcode-terminal")
 
 async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState("session")
@@ -16,8 +15,8 @@ async function startBot() {
         const { connection, qr, lastDisconnect } = update
 
         if (qr) {
-            console.log("📲 Scan this QR:\n")
-            qrcode.generate(qr, { small: true })
+            console.log("\n📲 افتح الرابط ده في المتصفح:\n")
+            console.log(`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${qr}\n`)
         }
 
         if (connection === "connecting") {
