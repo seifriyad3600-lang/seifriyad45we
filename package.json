@@ -1,14 +1,14 @@
 {
   "name": "seifbot",
   "version": "1.0.0",
-  "description": "Seif WhatsApp Bot",
+  "description": "Simple WhatsApp Bot using Baileys (QR Version)",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.2",
+    "@whiskeysockets/baileys": "^6.6.0",
     "pino": "^8.17.0",
     "qrcode-terminal": "^0.12.0"
   }
